@@ -3,11 +3,11 @@ query GetCharactersPage2 {
     results {
       id
       name
-      species
       status
       image
     }
   }
 }
+
 
 
