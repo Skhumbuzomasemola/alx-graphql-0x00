@@ -1,0 +1,24 @@
+{
+  "data": {
+    "characters": {
+      "info": {
+        "count": 826,
+        "pages": 42
+      },
+      "results": [
+        {
+          "id": "1",
+          "name": "Rick Sanchez",
+          "status": "Alive",
+          "species": "Human"
+        },
+        {
+          "id": "2",
+          "name": "Morty Smith",
+          "status": "Alive",
+          "species": "Human"
+        }
+      ]
+    }
+  }
+}
