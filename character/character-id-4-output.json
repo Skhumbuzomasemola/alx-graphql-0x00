@@ -3,19 +3,38 @@
     "characters": {
       "results": [
         {
-          "id": "1",
-          "name": "Rick Sanchez",
+          "id": "61",
+          "name": "Blue Shirt Morty",
           "status": "Alive",
-          "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+          "image": "https://rickandmortyapi.com/api/character/avatar/61.jpeg"
         },
         {
-          "id": "2",
-          "name": "Morty Smith",
+          "id": "62",
+          "name": "Bobby Moynihan",
           "status": "Alive",
-          "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+          "image": "https://rickandmortyapi.com/api/character/avatar/62.jpeg"
+        },
+        {
+          "id": "63",
+          "name": "Boobloosian",
+          "status": "Alive",
+          "image": "https://rickandmortyapi.com/api/character/avatar/63.jpeg"
+        },
+        {
+          "id": "64",
+          "name": "Bootleg Portal Chemist",
+          "status": "Alive",
+          "image": "https://rickandmortyapi.com/api/character/avatar/64.jpeg"
+        },
+        {
+          "id": "65",
+          "name": "Brad",
+          "status": "Alive",
+          "image": "https://rickandmortyapi.com/api/character/avatar/65.jpeg"
         }
       ]
     }
   }
 }
+
 
