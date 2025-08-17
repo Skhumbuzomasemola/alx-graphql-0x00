@@ -1,14 +1,13 @@
-# characters-page-1.graphql
-query GetAllCharacters {
-  characters {
+query GetCharactersPage1 {
+  characters(page: 1) {
     results {
       id
       name
-      species
       status
       image
     }
   }
 }
+
 
 
