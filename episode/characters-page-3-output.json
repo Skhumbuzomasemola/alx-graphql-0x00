@@ -1,0 +1,24 @@
+{
+  "data": {
+    "characters": {
+      "info": {
+        "count": 826,
+        "pages": 42
+      },
+      "results": [
+        {
+          "id": "41",
+          "name": "Big Morty",
+          "status": "Dead",
+          "species": "Human"
+        },
+        {
+          "id": "42",
+          "name": "Bigfoot",
+          "status": "unknown",
+          "species": "Mythological Creature"
+        }
+      ]
+    }
+  }
+}
