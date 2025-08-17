@@ -1,33 +1,17 @@
-// fetch-characters.js
-import { GraphQLClient, gql } from 'graphql-request';
-import fs from 'fs';
-
-const endpoint = 'https://your-graphql-api.com/graphql'; // replace with actual endpoint
-const client = new GraphQLClient(endpoint);
-
-async function fetchPage(page) {
-  const query = gql`
-    query GetCharacters($page: Int!) {
-      characters(page: $page) {
-        results {
-          id
-          name
-          status
-          image
+{
+  "data": {
+    "characters": {
+      "results": [
+        {
+          "id": "1",
+          "name": "Rick Sanchez",
+          "status": "Alive",
+          "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
         }
-      }
+        // ...more characters
+      ]
     }
-  `;
-  const data = await client.request(query, { page });
-  fs.writeFileSync(`characters-page-${page}-output.json`, JSON.stringify(data, null, 2));
-  console.log(`Saved characters-page-${page}-output.json`);
-}
-
-async function main() {
-  for (let page = 1; page <= 4; page++) {
-    await fetchPage(page);
   }
 }
 
-main().catch(console.error); 
 
