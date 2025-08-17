@@ -1,0 +1,11 @@
+query GetEpisodesPage3 {
+  episodes(page: 3) {
+    results {
+      id
+      name
+      air_date
+      episode
+    }
+  }
+}
+
