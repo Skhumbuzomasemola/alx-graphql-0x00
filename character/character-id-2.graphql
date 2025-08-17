@@ -1,6 +1,6 @@
 # character-id-1.graphql
 query {
-  character(id: 2) {
+  character(id: 1) {
     id
     name
     status
