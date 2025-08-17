@@ -1,11 +1,13 @@
-{
+query GetCharactersPage2 {
   characters(page: 2) {
     results {
       id
       name
+      species
       status
       image
     }
   }
 }
+
 
