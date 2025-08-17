@@ -1,0 +1,24 @@
+{
+  "data": {
+    "characters": {
+      "info": {
+        "count": 826,
+        "pages": 42
+      },
+      "results": [
+        {
+          "id": "61",
+          "name": "Beth's Mytholog",
+          "status": "Dead",
+          "species": "Mytholog"
+        },
+        {
+          "id": "62",
+          "name": "Beth Smith",
+          "status": "Alive",
+          "species": "Human"
+        }
+      ]
+    }
+  }
+}
