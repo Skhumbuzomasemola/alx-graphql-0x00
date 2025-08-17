@@ -1,38 +1,33 @@
-{
-  "data": {
-    "characters": {
-      "results": [
-        {
-          "id": "1",
-          "name": "Rick Sanchez",
-          "status": "Alive",
-          "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
-        },
-        {
-          "id": "2",
-          "name": "Morty Smith",
-          "status": "Alive",
-          "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
-        },
-        {
-          "id": "3",
-          "name": "Summer Smith",
-          "status": "Alive",
-          "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg"
-        },
-        {
-          "id": "4",
-          "name": "Beth Smith",
-          "status": "Alive",
-          "image": "https://rickandmortyapi.com/api/character/avatar/4.jpeg"
-        },
-        {
-          "id": "5",
-          "name": "Jerry Smith",
-          "status": "Alive",
-          "image": "https://rickandmortyapi.com/api/character/avatar/5.jpeg"
+// fetch-characters.js
+import { GraphQLClient, gql } from 'graphql-request';
+import fs from 'fs';
+
+const endpoint = 'https://your-graphql-api.com/graphql'; // replace with actual endpoint
+const client = new GraphQLClient(endpoint);
+
+async function fetchPage(page) {
+  const query = gql`
+    query GetCharacters($page: Int!) {
+      characters(page: $page) {
+        results {
+          id
+          name
+          status
+          image
         }
-      ]
+      }
     }
+  `;
+  const data = await client.request(query, { page });
+  fs.writeFileSync(`characters-page-${page}-output.json`, JSON.stringify(data, null, 2));
+  console.log(`Saved characters-page-${page}-output.json`);
+}
+
+async function main() {
+  for (let page = 1; page <= 4; page++) {
+    await fetchPage(page);
   }
 }
+
+main().catch(console.error);
+
